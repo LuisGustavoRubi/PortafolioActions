@@ -1,0 +1,35 @@
+@import "variables.less";
+
+body {
+    font-size: @font-size;
+    background-color: @secondary-color;
+    color: white;
+    text-align: center;
+}
+
+.foto-perfil {
+    img{
+        width: 200px;  // Fuerza el ancho fijo
+        height: 200px; // Fuerza el alto fijo
+        object-fit: cover; // Mantiene la proporción sin deformarse
+        border-radius: 5px;
+    }
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    .game-card {
+        border: 2px solid @primary-color;
+        padding: 10px;
+        border-radius: 10px;
+        img {
+        width: 200px;  // Fuerza el ancho fijo
+        height: 200px; // Fuerza el alto fijo
+        object-fit: cover; // Mantiene la proporción sin deformarse
+        border-radius: 5px;
+        }
+    }
+}
