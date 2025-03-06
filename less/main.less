@@ -7,12 +7,22 @@ body {
     text-align: center;
 }
 
+
 .foto-perfil {
-    img{
-        width: 200px;  // Fuerza el ancho fijo
-        height: 200px; // Fuerza el alto fijo
-        object-fit: cover; // Mantiene la proporción sin deformarse
-        border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 50%; 
+        transition: transform 0.3s ease; 
+
+        &:hover {
+            transform: scale(1.1); 
+        }
     }
 }
 
@@ -20,16 +30,34 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 
     .game-card {
         border: 2px solid @primary-color;
         padding: 10px;
         border-radius: 10px;
-        img {
-        width: 200px;  // Fuerza el ancho fijo
-        height: 200px; // Fuerza el alto fijo
-        object-fit: cover; // Mantiene la proporción sin deformarse
-        border-radius: 5px;
+        width: 220px;
+        text-align: center;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.05); 
         }
+
+        img {
+            width: 100%; 
+            max-width: 200px; 
+            height: auto; 
+            object-fit: cover;
+            border-radius: 5px;
+        }
+    }
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 768px) {
+    .game-container {
+        flex-direction: column; 
+        align-items: center; 
     }
 }
