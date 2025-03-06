@@ -31,7 +31,7 @@ jobs:
       - name: Instalar Dependencias
         run: npm install
       - name: Setear variables de ambiente
-        run: echo "DEPLOY_BASE_URL: $DEPLOY_BASE_URL"
+        run: echo "DEPLOY_BASE_URL $DEPLOY_BASE_URL"
       - name: Compilar proyecto
         run: npm run build
       - name: Configurar github pages
